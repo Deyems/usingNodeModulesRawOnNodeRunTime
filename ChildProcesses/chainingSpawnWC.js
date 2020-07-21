@@ -1,6 +1,6 @@
 const { spawn } = require('child_process');
 
-const find = spawn('pwd', ['.', '-type', 'f']);
+const find = spawn('find', ['.', '-type', 'f']);
 const wc = spawn('wc', ['-l']);
 
 //Adding Input stream to Output stream
