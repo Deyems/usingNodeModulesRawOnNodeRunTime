@@ -12,7 +12,11 @@ http.createServer((req, res) => {
     console.log(`Started process ${pid}`);
 });
 
-process.on('message', msg => {
-    usersCount = msg.usersCount;
+// process.on('message', msg => {
+//     usersCount = msg.usersCount;
     
-});
+// });
+
+setTimeout(() => {
+    process.exit(1);
+}, Math.random() * 10000);
